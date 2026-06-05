@@ -21,6 +21,16 @@ const goal = 3;
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
+        <style>
+            h1 {
+                color: purple;
+                font-size: 4rem;
+            }
+            .skill {
+                color: green;
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
         <a href="/">首页</a>
@@ -53,7 +63,7 @@ const goal = 3;
         </ul>
         <p>我的技能是：</p>
         <ul>
-            {skills.map((s) => <li>{s}</li>)}
+            {skills.map((s) => <li class="skill">{s}</li>)}
         </ul>
 
         {happy && <p>我非常乐意学习 Astro！</p>}
