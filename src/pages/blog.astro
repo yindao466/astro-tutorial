@@ -11,7 +11,7 @@ const pageTitle = "我的 Astro 学习博客";
 	<p>在这里，我将分享我的 Astro 学习之旅。</p>
 	<ul>
 		{
-			allPost.map((p) => (
+			allPost.map((p:any) => (
 				<BlogPost url={p.url} title={p.frontmatter.title} />
 			))
 		}
