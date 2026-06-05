@@ -1,8 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from "../components/Greeting";
 const pageTitle = "首页";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<h2>我超棒的博客副标题</h2>
+	<!--  client:load 指令告诉 Astro 在页面加载时将其 JavaScript 发送并重新运行到客户端上，使组件可交互。这称为被注水的组件。 -->
+	<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>
